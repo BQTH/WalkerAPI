@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 //Import routes
 var landmarksRoute = require('./routes/landmarks');
-var pplRoute = require('./routes/ppl');
 //Import env
 require('dotenv/config');
 
@@ -18,12 +17,11 @@ app.use(express.json());
 //Middlewares
 app.use(cors());
 app.use('/landmarks', landmarksRoute);
-app.use('/ppl_count', pplRoute);
 
 
 //ROUTES
 app.get('/', (req, res) => { 
-    res.send('Send get/post/delete/patch requests for/with data to https://interactiveellieapi.herokuapp.com/landmarks' );
+    res.send('Send get/post/delete/patch requests for/with data to https://walkerapi.herokuapp.com/landmarks' );
 });
 
 //connect to database

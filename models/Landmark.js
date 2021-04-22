@@ -15,9 +15,9 @@ const LandmarkSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    pointvalue: {
-        type: Number,
-        required: false
+    url: {
+        type: String,
+        required: true
     },
     lat: {
         type: Number,

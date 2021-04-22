@@ -22,7 +22,10 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const landmark = new Landmark({
         title: req.body.title,
-        description: req.body.description
+        description: req.body.description,
+        url: req.body.url,
+        lat: req.body.lat,
+        lon: req.body.lon
     });
     
     /* Check
